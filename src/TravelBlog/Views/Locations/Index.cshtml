@@ -9,7 +9,8 @@
     @foreach (var location in Model)
     {
 
-        <li>@Html.DisplayFor(modelPlace => location.PlaceName)</li>
+        <li>@Html.DisplayFor(modelPlace => location.PlaceName) @Html.ActionLink("Edit", "Edit", new { id = location.LocationId })| @Html.ActionLink("Delete", "Delete", new { id = location.LocationId }) </li>
 
     }
 </ul>
+<p>@Html.ActionLink("Add a place", "Create")</p>
