@@ -19,14 +19,11 @@ namespace TravelBlog.Controllers
         }
         public IActionResult Details(int id)
         {
-            var thisLocation = db.Locations.FirstOrDefault(locations =>locations.LocationId == id);
-            var allPeople = db.People.ToList();
-            var allExperiences = db.Experiences.ToList();
-            Dictionary<string, Object> ViewDict = new Dictionary<string, object>();
-            ViewDict.Add("thisLocation", thisLocation);
-            ViewDict.Add("allExperiences", allExperiences);
-            ViewDict.Add("allPeople", allPeople);
-            return View(ViewDict);
+            var thisLocation = db.Locations.Include(location => location.Experiences).FirstOrDefault(locations =>locations.LocationId == id);
+            //var allExperiences = db.Experiences.ToList();
+            //var allPeople = db.People.ToList();
+            //thisLocation.People;
+            return View(thisLocation);
         }
         public IActionResult Create()
         {

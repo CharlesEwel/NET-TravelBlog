@@ -9,11 +9,18 @@ namespace TravelBlog.Models
 {
     [Table("Locations")]
     public class Location
+
     {
+        public Location()
+        {
+            Experiences = new List<Experience>();
+            People = new List<Person>();
+        }
         [Key]
         public int LocationId { get; set; }
         public string PlaceName { get; set; }
         public virtual ICollection<Experience> Experiences { get; set; }
+        public virtual ICollection<Person> People { get; set; }
 
     }
 }

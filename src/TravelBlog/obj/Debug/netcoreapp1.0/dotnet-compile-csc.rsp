@@ -200,6 +200,8 @@
 "c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907164426_Initial.Designer.cs"
 "c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907214354_AddNewTable.cs"
 "c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907214354_AddNewTable.Designer.cs"
+"c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907223944_AddPeopleList.cs"
+"c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907223944_AddPeopleList.Designer.cs"
 "c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\TravelBlogDbContextModelSnapshot.cs"
 "c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Models\Experience.cs"
 "c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Models\Location.cs"
