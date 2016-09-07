@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Travel Blog: Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TravelBlog.Models.Person
+<h2>Edit</h2>
+<hr />
+<h4>Edit this person: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{   @Html.HiddenFor(model => model.PersonId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.LocationId)
+    @Html.DropDownList("LocationId")
+    <input type="submit" value="Edit Person" />
+}
+<p>@Html.ActionLink("Back to location", "Index")</p>

@@ -199,9 +199,13 @@ c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Startup.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Controllers\ExperiencesController.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Controllers\HomeController.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Controllers\LocationsController.cs
+c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Controllers\PeopleController.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907164426_Initial.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907164426_Initial.Designer.cs
+c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907214354_AddNewTable.cs
+c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\20160907214354_AddNewTable.Designer.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Migrations\TravelBlogDbContextModelSnapshot.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Models\Experience.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Models\Location.cs
+c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Models\People.cs
 c:\users\epicodus\desktop\TravelBlog\src\TravelBlog\Models\TravelBlogDbContext.cs

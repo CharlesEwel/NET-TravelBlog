@@ -20,10 +20,12 @@ namespace TravelBlog.Controllers
         public IActionResult Details(int id)
         {
             var thisLocation = db.Locations.FirstOrDefault(locations =>locations.LocationId == id);
+            var allPeople = db.People.ToList();
             var allExperiences = db.Experiences.ToList();
             Dictionary<string, Object> ViewDict = new Dictionary<string, object>();
             ViewDict.Add("thisLocation", thisLocation);
             ViewDict.Add("allExperiences", allExperiences);
+            ViewDict.Add("allPeople", allPeople);
             return View(ViewDict);
         }
         public IActionResult Create()
