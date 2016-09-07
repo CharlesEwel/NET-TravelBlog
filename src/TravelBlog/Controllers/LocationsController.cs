@@ -12,10 +12,19 @@ namespace TravelBlog.Controllers
 {
     public class LocationsController : Controller
     {
-        public TravelBlogDbContext db = new TravelBlogDbContext();
+        private TravelBlogDbContext db = new TravelBlogDbContext();
         public IActionResult Index()
         {
             return View(db.Locations.ToList());
+        }
+        public IActionResult Details(int id)
+        {
+            var thisLocation = db.Locations.FirstOrDefault(locations =>locations.LocationId == id);
+            var allExperiences = db.Experiences.ToList();
+            Dictionary<string, Object> ViewDict = new Dictionary<string, object>();
+            ViewDict.Add("thisLocation", thisLocation);
+            ViewDict.Add("allExperiences", allExperiences);
+            return View(ViewDict);
         }
         public IActionResult Create()
         {

@@ -1,0 +1,25 @@
+﻿@using TravelBlog.Models;
+@{
+    ViewData["Title"] = "Travel Blog: Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var thisLocation = (Location)Model["thisLocation"];
+    var allExperiences = (List<Experience>)Model["allExperiences"];
+}
+<h2>Details</h2>
+<hr />
+Place Name: @thisLocation.PlaceName
+<h4>Experiences</h4>
+<ul>
+    @foreach(var experience in allExperiences)
+    {
+        @if (experience.LocationId == thisLocation.LocationId)
+        {
+            <li>
+                @experience.Description
+            </li>
+        }
+    }
+</ul>
+<p>@Html.ActionLink("Back to list", "Index")</p>
