@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Travel Blog: Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TravelBlog.Models.Experience
+<h2>Details</h2>
+<hr />
+Place Name: @Model.Description
+<hr />
+Images: <img src="@Model.Image" />
+<h4>Experiences Encountered</h4>
+
+<h4>People we had the experience with</h4>
+<p>@Html.ActionLink("Back to list", "Index")</p>

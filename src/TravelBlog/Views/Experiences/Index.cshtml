@@ -9,8 +9,9 @@
     @foreach (var experience in Model)
     {
 
-        <li>@Html.DisplayFor(model => experience.Description) @Html.ActionLink("Edit", "Edit", new { id = experience.ExperienceId })| @Html.ActionLink("Delete", "Delete", new { id = experience.ExperienceId }) </li>
+        <li>@Html.DisplayFor(model => experience.Description) @Html.ActionLink("Edit", "Edit", new { id = experience.ExperienceId })| @Html.ActionLink("Delete", "Delete", new { id = experience.ExperienceId })| @Html.ActionLink("Details", "Details", new { id = experience.ExperienceId }) </li>
 
     }
 </ul>
 <p>@Html.ActionLink("Add an experience", "Create")</p>
+<a href="/">Back To Home</a>

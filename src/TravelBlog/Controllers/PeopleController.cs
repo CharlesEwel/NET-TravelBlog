@@ -18,6 +18,11 @@ namespace TravelBlog.Controllers
         {
             return View(db.People.ToList());
         }
+        public IActionResult Details(int id)
+        {
+            var thisPeople = db.People.Include(people => people.PeopleExperiencesJoins).FirstOrDefault(people => people.PersonId == id);
+            return View(thisPeople);
+        }
         public IActionResult Create()
         {
             ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "PlaceName");

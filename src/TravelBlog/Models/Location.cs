@@ -23,5 +23,6 @@ namespace TravelBlog.Models
         public virtual ICollection<Experience> Experiences { get; set; }
         public virtual ICollection<Person> People { get; set; }
 
+
     }
 }

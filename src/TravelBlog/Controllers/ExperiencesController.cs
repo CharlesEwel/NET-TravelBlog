@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TravelBlog.Models;
+using Microsoft.EntityFrameworkCore.Internal;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,6 +19,13 @@ namespace TravelBlog.Controllers
         {
             return View(db.Experiences.ToList());
         }
+        public IActionResult Details(int id, int PersonId, int ExperienceId)
+        {
+            var thisExperience = db.Experiences.Include(e=>e.PeopleExperiencesJoins).FirstOrDefault(e=>e.ExperienceId == id);
+            
+            return View(thisExperience);
+        }
+   
         public IActionResult Create()
         {
             ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "PlaceName");

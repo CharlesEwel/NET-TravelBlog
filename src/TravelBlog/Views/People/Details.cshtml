@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Travel Blog: Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TravelBlog.Models.Location
+<h2>Details</h2>
+<hr />
+Place Name: @Model.PlaceName
+<hr />
+Images: <img src="@Model.Image" />
+<h4>Experiences Encountered</h4>
+<ul>
+    @foreach (var experience in Model.Experiences)
+    {
+        <li>
+            @experience.Description
+        <img src="@experience.Image" />
+    </li>
+    }
+</ul>
+<h4>People</h4>
+<ul>
+    @foreach (var people in Model.People)
+    {
+        <li>@people.Name</li>
+    }
+</ul>
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

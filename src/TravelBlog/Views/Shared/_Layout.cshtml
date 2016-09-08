@@ -2,11 +2,22 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" /> 
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid jumbotron">
+            <ul class="nav nav-tabs">
+                <li><a href="/">Back To Home</a></li>
+                <li><a href="/locations">Locations</a></li>
+                <li><a href="/people">People</a></li>
+                <li><a href="/experiences">Experiences</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
         @RenderBody()
     </div>
 </body>
