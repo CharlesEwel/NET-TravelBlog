@@ -7,6 +7,20 @@
 <h2>Details</h2>
 <hr />
 Place Name: @Model.PlaceName
-<h4>Experiences</h4>
-@Model.Experiences.Count
+
+<h4>Experiences Encountered</h4>
+<ul>
+    @foreach (var experience in Model.Experiences)
+        {
+        <li>@experience.Description</li>
+        }
+</ul>
+<h4>People</h4>
+<ul>
+    @foreach (var people in Model.People)
+    {
+        <li>@people.Name</li>
+    }
+</ul>
+
 <p>@Html.ActionLink("Back to list", "Index")</p>
