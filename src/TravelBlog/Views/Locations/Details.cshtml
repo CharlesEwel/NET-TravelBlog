@@ -7,12 +7,15 @@
 <h2>Details</h2>
 <hr />
 Place Name: @Model.PlaceName
-
+<hr />
+Images: <img src="@Model.Image" />
 <h4>Experiences Encountered</h4>
 <ul>
     @foreach (var experience in Model.Experiences)
         {
-        <li>@experience.Description</li>
+        <li>@experience.Description
+            <img src="@experience.Image" />
+        </li>
         }
 </ul>
 <h4>People</h4>

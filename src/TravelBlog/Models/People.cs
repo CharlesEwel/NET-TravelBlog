@@ -14,6 +14,7 @@ namespace TravelBlog.Models
         [Key]
         public int PersonId { get; set; }
         public string Name { get; set; }
+        public string Image { get; set; }
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
     }

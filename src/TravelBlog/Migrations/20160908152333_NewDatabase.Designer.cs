@@ -8,9 +8,10 @@ using TravelBlog.Models;
 namespace TravelBlog.Migrations
 {
     [DbContext(typeof(TravelBlogDbContext))]
-    partial class TravelBlogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160908152333_NewDatabase")]
+    partial class NewDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
@@ -22,8 +23,6 @@ namespace TravelBlog.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description");
-
-                    b.Property<string>("Image");
 
                     b.Property<int>("LocationId");
 
@@ -39,8 +38,6 @@ namespace TravelBlog.Migrations
                     b.Property<int>("LocationId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Image");
-
                     b.Property<string>("PlaceName");
 
                     b.HasKey("LocationId");
@@ -52,8 +49,6 @@ namespace TravelBlog.Migrations
                 {
                     b.Property<int>("PersonId")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Image");
 
                     b.Property<int>("LocationId");
 

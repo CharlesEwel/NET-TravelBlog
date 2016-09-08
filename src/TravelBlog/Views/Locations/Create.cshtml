@@ -8,6 +8,8 @@
 {
     @Html.LabelFor(model => model.PlaceName)
     @Html.TextBoxFor(model=> model.PlaceName)
+    @Html.LabelFor(model => model.Image)
+    @Html.TextBoxFor(model => model.Image)
         <input type="submit" value="Add a Place" />
 }
 <p>@Html.ActionLink("Back to location", "Index")</p>
